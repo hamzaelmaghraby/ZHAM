@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcom0">
+
+    <fragment
+        android:id="@+id/welcom0"
+        android:name="com.example.zham.Welcom0"
+        android:label="fragment_welcom0"
+        tools:layout="@layout/fragment_welcom0" >
+        <action
+            android:id="@+id/action_welcom0_to_welcome1"
+            app:destination="@id/welcome1" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome1"
+        android:name="com.example.zham.welcome1"
+        android:label="fragment_welcome1"
+        tools:layout="@layout/fragment_welcome1" >
+        <action
+            android:id="@+id/action_welcome1_to_welcome2"
+            app:destination="@id/welcome2" />
+        <action
+            android:id="@+id/action_welcome1_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome2"
+        android:name="com.example.zham.welcome2"
+        android:label="fragment_welcome2"
+        tools:layout="@layout/fragment_welcome2" >
+        <action
+            android:id="@+id/action_welcome2_to_welcome3"
+            app:destination="@id/welcome3" />
+        <action
+            android:id="@+id/action_welcome2_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome3"
+        android:name="com.example.zham.welcome3"
+        android:label="fragment_welcome3"
+        tools:layout="@layout/fragment_welcome3" >
+        <action
+            android:id="@+id/action_welcome3_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.zham.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/signup" />
+        <action
+            android:id="@+id/action_login_self"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_login_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.example.zham.signup"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signup_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.zham.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+</navigation>
